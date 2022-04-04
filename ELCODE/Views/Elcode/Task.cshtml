@@ -1,0 +1,17 @@
+﻿@model IEnumerable<ELCODE.ViewModels.ClientViewModel>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Решение | MAXon28</title>
+    <link rel="stylesheet" href="~/css/task.css" />
+</head>
+<div class="text-center block">
+    <a class="button buttonCreationClient" asp-area="" asp-controller="Elcode" asp-action="ClientCreator">Добавить клиента</a>
+    @foreach (var item in Model)
+    {
+        <a class="button buttonCreationRequest" asp-area="" asp-controller="Elcode" asp-action="RequestCreator" asp-route-clientId="@item.Id">@item.Name</a>
+    }
+</div>
+</html>

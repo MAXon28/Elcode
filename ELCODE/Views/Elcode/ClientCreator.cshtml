@@ -1,0 +1,24 @@
+﻿@model IEnumerable<ELCODE.ViewModels.ImportanceViewModel>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Создание клиента | MAXon28</title>
+    <link rel="stylesheet" href="~/css/clientCreator.css" />
+</head>
+<div class="text-center block">
+    <div class="inputbox">
+        <input id="client" class="input" type="text" required="required" autocomplete="off">
+        <span class="placeholder1">Клиент</span>
+    </div>
+    <select id="importance" class="toolbar-font">
+        @foreach (var item in Model)
+        {
+            <option value="@item.Id">@item.Name</option>   
+        }
+    </select>
+    <a class="button" asp-area="" asp-controller="Elcode" asp-action="Task" onclick="AddClient()">Добавить</a>
+</div>
+<script src="~/js/clientCreator.js"></script>
+</html>

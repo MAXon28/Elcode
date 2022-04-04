@@ -1,0 +1,79 @@
+﻿.block {
+    width: 528px;
+    display: flex;
+    flex-direction: column;
+    margin: 128px auto;
+}
+
+.inputbox {
+    position: relative;
+    margin: 28px auto;
+    width: 100%;
+}
+
+.input {
+    border: 1px solid #e0e0e0;
+    outline: none;
+    padding: 19px 12px;
+    border-radius: 5px;
+    font-size: 22px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border 328ms;
+}
+
+.placeholder1 {
+    color: #e0e0e0;
+    font-family: sans-serif;
+    left: 12px;
+    pointer-events: none;
+    position: absolute;
+    transform-origin: 0 50%;
+    transition: transform 500ms, color 500ms;
+    top: 17px;
+    background: white;
+    font-size: 22px;
+    padding: 3px;
+}
+
+.input:focus ~ .placeholder1, .input:valid ~ .placeholder1 {
+    transform: translateX(-1px) translateY(-28px);
+    font-size: 16px;
+    color: #87CEFA;
+}
+
+.input:focus {
+    border: 1px solid #E29930;
+}
+
+.toolbar-font {
+    outline: none;
+    background: #211f30;
+    border-radius: 5px;
+    color: #87CEFA;
+    font-size: 22px;
+    border: 0;
+    padding: 12px;
+    margin: 22px;
+}
+
+.button {
+    background: #211F30;
+    padding: 28px;
+    color: #87CEFA;
+    width: 328px;
+    margin: 28px auto;
+    border-radius: 7px;
+    font-size: 28px;
+    font-family: sans-serif;
+    text-decoration: none;
+    box-shadow: 0 4px 16px #ccc;
+    transition: all 0.3s ease-out;
+    cursor: pointer;
+}
+
+.button:hover {
+    color: #87CEFA;
+    transform: translateY(-1px) scale(1.005) translateZ(0);
+    box-shadow: 0 24px 36px #ccc;
+}

@@ -1,0 +1,40 @@
+﻿.block {
+    display: flex;
+    flex-direction: column;
+    margin: 128px;
+}
+
+.button {
+    background: #211F30;
+    padding: 28px;
+    width: 328px;
+    margin: 28px auto;
+    border-radius: 7px;
+    font-size: 28px;
+    font-family: sans-serif;
+    text-decoration: none;
+    box-shadow: 0 4px 16px #ccc;
+    transition: all 0.3s ease-out;
+    cursor: pointer;
+}
+
+.buttonCreationClient {
+    color: #87CEFA;
+}
+
+.buttonCreationRequest {
+    color: #E29930;
+}
+
+.button:hover {
+    transform: translateY(-1px) scale(1.005) translateZ(0);
+    box-shadow: 0 24px 36px #ccc;
+}
+
+.buttonCreationClient:hover {
+    color: #87CEFA;
+}
+
+.buttonCreationRequest:hover {
+    color: #E29930;
+}

@@ -1,0 +1,38 @@
+﻿@model IEnumerable<ELCODE.ViewModels.RequestTypeViewModel>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Создание клиента | MAXon28</title>
+    <link rel="stylesheet" href="~/css/clientCreator.css" />
+</head>
+<div class="text-center block">
+    @if(Model is not null && Model.ToList().Count > 0)
+    {
+        <select id="requestType" class="toolbar-font">
+            @foreach (var item in Model)
+            {
+                <option value="@item.Id">@item.Name</option>   
+            }
+        </select>
+    }
+    <div class="inputbox">
+        <input id="description" class="input" type="text" required="required" autocomplete="off">
+        <span class="placeholder1">Содержание</span>
+    </div>
+    <select id="channel" class="toolbar-font">
+        <option value="1">Email</option>
+        <option value="2">Api</option>
+        <option value="3">Телефон</option>
+    </select>
+    <select id="request" class="toolbar-font">
+        <option value="Новый запрос">Новый запрос</option>
+        <option value="Уточняющий запрос">Уточняющий запрос</option>
+    </select>
+    <select id="requests" class="toolbar-font" style="display: none;"></select>
+    <a class="button" asp-area="" asp-controller="Elcode" asp-action="Task" onclick="AddRequest()">Создать</a>
+</div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script language="JavaScript" type="text/javascript" src="~/js/requestCreator.js"></script>
+</html>
